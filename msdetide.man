@@ -1,0 +1,49 @@
+.TH MSDETIDE 1 "15 February 2014" "MSEED TIDE CREX/GTS TOOLS"
+.SH NAME
+msdetide - mini-seed client to detide MSEED formatted files
+.SH SYNOPSIS
+.B "msdetide"
+[-hvw]
+[-I\ \fItag\fP]
+[-A\ \fIalpha\fP]
+[-B\ \fIbeta\fP]
+[-L\ \fIlatitude\fP]
+[-Z\ \fIzone\fP]
+[-T\ \fItide\fP]
+[-G <\fIgts_dir\fP>]
+[<mseed_files>]
+.SH DESCRIPTION
+.PP
+The mini-seed client
+.I msdetide
+will detide MSEED files using the tidal constants provided.
+.SH OPTIONS
+.TP 5
+.B "-h --help"
+provide usage help
+.TP 5
+.B "-v --verbose"
+run program in verbose mode, multiple flags increase the amount of noise
+.TP 5
+.B "-A --alpha \fIfactor\fP"
+add offset to input samples
+.TP 5
+.B "-B --beta \fIbeta\fP"
+scale input samples
+.TP 5
+.B "-L --latitude \fIvalue\fP"
+provide reference latitude
+.TP 5
+.B "-Z --zone \fIoffset\fP"
+provide reference time zone offet
+.TP 5
+.B "-T --tide \fIlabel/amplitude/tag\fP"
+provide tidal constants 
+.SH USAGE
+This \fIminiseed\fP client detides MSEED files.
+.SH SEE ALSO
+libmseed, libslink
+.SH AUTHOR
+Mark Chadwick
+.SH COPYRIGHT
+Copyright 2014 Geological \& Nuclear Sciences (GNS Science) Ltd.
