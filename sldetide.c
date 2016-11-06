@@ -45,7 +45,7 @@
 #define PROGRAM "sldetide" /* program name */
 
 #ifndef PACKAGE_VERSION
-#define PACKAGE_VERSION xxx
+#define PACKAGE_VERSION "xxx"
 #endif
 
 /*
@@ -55,7 +55,7 @@
 
 /* program variables */
 static char *program_name = PROGRAM;
-static char *program_version = PROGRAM " 1.0.0 (c) GNS 2014 (m.chadwick@gns.cri.nz)";
+static char *program_version = PROGRAM " (" PACKAGE_VERSION ") (c) GNS 2014 (m.chadwick@gns.cri.nz)";
 static char *program_usage = PROGRAM " [-hv][-w][-i <id>][-A <alpha>][-B <beta>][-O <orient>][-L <latitude>][-Z <zone>][-T <label/amp/lag> ...][<seedlink_options>] [<server>] [<datalink>]";
 static char *program_prefix = "[" PROGRAM "] ";
 

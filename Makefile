@@ -4,7 +4,7 @@
 #   CC : Specify the C compiler to use
 #   CFLAGS : Specify compiler options to use
 
-CFLAGS += -I.
+CFLAGS += -I. -DPACKAGE_VERSION=\"1.0.1\"
 LDFLAGS =
 LDLIBS = -ltidal -ldali -lslink -lmseed -lm
 

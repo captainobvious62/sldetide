@@ -41,6 +41,10 @@
 
 #define PROGRAM "msdetide" /* program name */
 
+#ifndef PACKAGE_VERSION
+#define PACKAGE_VERSION "xxx"
+#endif
+
 /*
  * msdetide: process raw miniseed tidal records to convert from recorded counts into sea level heights, with and without the tidal components
  *
@@ -48,7 +52,7 @@
 
 /* program variables */
 static char *program_name = PROGRAM;
-static char *program_version = PROGRAM " (1.0.0) (c) GNS 2012 (m.chadwick@gns.cri.nz)";
+static char *program_version = PROGRAM " (" PACKAGE_VERSION ") (c) GNS 2012 (m.chadwick@gns.cri.nz)";
 static char *program_usage = PROGRAM " [-hv][-A <alpha>][-B <beta>][-O <orient>][-L <latitude>][-Z <zone>][-T <label/amp/lag> ...][<files> ... ]";
 static char *program_prefix = "[" PROGRAM "] ";
 
