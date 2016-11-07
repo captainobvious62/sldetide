@@ -8,7 +8,7 @@ ENV LIBTIDAL_VERSION 1.0.4
 
 ADD . /src
 
-RUN apk --update add curl make tar gcc libc-dev && \
+RUN apk --update add --no-cache curl make tar gcc libc-dev && \
         curl -o /tmp/libmseed-${LIBMSEED_VERSION}.tar.gz https://seiscode.iris.washington.edu/attachments/download/653/libmseed-${LIBMSEED_VERSION}.tar.gz && \
         cd /tmp && tar xvfz libmseed-${LIBMSEED_VERSION}.tar.gz && \
         cd /tmp/libmseed && make && \
@@ -38,6 +38,7 @@ RUN apk --update add curl make tar gcc libc-dev && \
         rm -rf /tmp/libtidal-${LIBTIDAL_VERSION} && \
         cd /src && make clean && make && \
         cp -a sldetide msdetide /usr/bin && \
-        make clean
+        make clean && \
+        apk --no-cache del make tar gcc libc-dev
 
 ENTRYPOINT ["/usr/bin/sldetide"]
